@@ -1,10 +1,10 @@
-global	_ft_write
+global	_ft_read
 extern ___error
 
 section	.text
 
-_ft_write:
-	mov rax, 0x2000004
+_ft_read:
+	mov rax, 0x2000003
 	syscall
 	jc error
 	ret
