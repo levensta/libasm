@@ -7,6 +7,7 @@ section	.text
 
 _ft_strdup:
 	push rdi
+	push rsi
 	mov rax, 0
 
 	call _ft_strlen
@@ -17,7 +18,8 @@ _ft_strdup:
 	cmp rax, 0
 	je return_zero
 	pop rdi ;s1
-	mov rsi, rax
+	mov rsi, rdi
+	mov rdi, rax
 	call _ft_strcpy
 
 return:
@@ -26,6 +28,5 @@ return:
 	ret
 
 return_zero:
-	pop rdi
 	mov rax, 0
-	ret
+	jmp return
