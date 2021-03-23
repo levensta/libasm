@@ -8,7 +8,7 @@ NA = nasm
 
 FLAGS = -Wall -Wextra -Werror
 
-NA_FLAG = -f macho64
+NA_FLAG = -f macho64 -L. -lasm
 
 
 SOURCE = 	ft_strlen.s \
